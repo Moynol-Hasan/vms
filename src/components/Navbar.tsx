@@ -20,12 +20,11 @@ import Image from "next/image";
 // }
 
 const Navbar: React.FC = () => {
-//   const { push } = useRouter();
-//   const [users, setUsers] = useState<Types.Admin | null>(null);
-//   const [role, setRole] = useState<string | null>("");
-//   const [isChecked, setIsChecked] = useState(false);
-//   const { systemTheme, theme, setTheme } = useTheme();
-
+  //   const { push } = useRouter();
+  //   const [users, setUsers] = useState<Types.Admin | null>(null);
+  //   const [role, setRole] = useState<string | null>("");
+  //   const [isChecked, setIsChecked] = useState(false);
+  //   const { systemTheme, theme, setTheme } = useTheme();
 
   return (
     <>
@@ -40,12 +39,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-end items-center gap-6">
           <div className="flex gap-4">
             <div>
-              <h1 className="text-[#39363C] poppins">
-                
-userName              </h1>
-              <h1 className="flex justify-end text-[#918F92] poppins">
-                role
-              </h1>
+              <h1 className="text-[#39363C] poppins">userName </h1>
+              <h1 className="flex justify-end text-[#918F92] poppins">role</h1>
             </div>
             <div className="flex justify-center items-center">
               {/* {users?.profilePicture ? (
@@ -81,16 +76,16 @@ userName              </h1>
                   />
                 </div>
               ) : ( */}
-                <div className="rounded-full-image-container">
-                  <Image
-                    src="/navbar/noImage.png"
-                    alt="Profile Picture"
-                    width={40}
-                    height={40}
-                    className="rounded-full-image"
-                    quality={100}
-                  />
-                </div>
+              <div className="rounded-full-image-container">
+                <Image
+                  src="/navbar/noImage.png"
+                  alt="Profile Picture"
+                  width={40}
+                  height={40}
+                  className="rounded-full-image"
+                  quality={100}
+                />
+              </div>
               {/* )} */}
             </div>
           </div>
