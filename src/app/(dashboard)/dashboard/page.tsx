@@ -10,7 +10,7 @@ import { CiSearch } from "react-icons/ci";
 // import { useAuth } from "@/app/Auth/AuthContext";
 // import BreadcrumbLastPath from "@/app/breadcrumbs/BreadcrumbLastPath";
 // import NextBreadcrumb from "@/app/breadcrumbs/NextBreadcrumb";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import {users} from "./Data"
 // import Pagination from "../../../components/pagination";
@@ -355,7 +355,7 @@ console.log(users);
                                 : null
                             } `}
                           >
-                            {user.active ? (
+                            {/* {user.active ? (
                               <Image
                                 src="/dashboard/check.svg"
                                 alt="Checkmark"
@@ -363,7 +363,7 @@ console.log(users);
                                 height={20}
                                 className="w-full h-full"
                               />
-                            ) : null}
+                            ) : null} */}
                           </div>
                         </div>
                       </label>

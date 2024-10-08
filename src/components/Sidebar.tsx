@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     push("/");
-    toast.success("Logout successful")
+    toast.success("Logout successful");
   };
 
   const isActivePath = (path: string) => {

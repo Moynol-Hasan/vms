@@ -15,6 +15,6 @@ export const users =  [
             id:3,
             name:"Dipu",
             mobileNumber:"+8801835678976",
-            active:true,
+            active:false,
         }
     ]

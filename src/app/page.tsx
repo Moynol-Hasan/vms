@@ -1,5 +1,8 @@
 "use client";
-import Login from "@/app/(login)/page"
+import dynamic from 'next/dynamic';
+const Login = dynamic(() => import('@/app/login/Page'), {
+  ssr: false,
+})
 import Image from 'next/image';
 
 const  Page = ()  => {

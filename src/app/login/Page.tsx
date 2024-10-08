@@ -11,22 +11,19 @@ import { useRouter } from "next/navigation";
 // import { useGlobalContext } from "@/app/context/GlobalProvider";
 // import { ClipLoader } from "react-spinners";
 
-
 const Page: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
-//   const [loading, setLoading] = useState(false);
-//   const pathname = usePathname();
+  //   const [loading, setLoading] = useState(false);
+  //   const pathname = usePathname();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     rememberMe: false,
   });
-//   const { setRole, handleUserRole } = useGlobalContext();
-//   const [fullUrl, setFullUrl] = useState<string | null>(null);
-//   const [logoutTimer, setLogoutTimer] = useState<NodeJS.Timeout | null>(null);
-  const {push} = useRouter();
-
-
+  //   const { setRole, handleUserRole } = useGlobalContext();
+  //   const [fullUrl, setFullUrl] = useState<string | null>(null);
+  //   const [logoutTimer, setLogoutTimer] = useState<NodeJS.Timeout | null>(null);
+  const { push } = useRouter();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -41,14 +38,12 @@ const Page: React.FC = () => {
     }));
   };
 
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if(formData.email==="admin@gmail.com" && formData.password==="12345"){
-        push("/dashboard")
+    if (formData.email === "admin@gmail.com" && formData.password === "12345") {
+      push("/dashboard");
     }
-    
   };
 
   return (
@@ -79,9 +74,7 @@ const Page: React.FC = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-[#656367] poppins">
-                  Password
-                </label>
+                <label className="text-[#656367] poppins">Password</label>
                 <div className="relative flex items-center">
                   <input
                     id="password"
@@ -99,23 +92,23 @@ const Page: React.FC = () => {
                   >
                     {showPassword ? (
                       <>
-                      <Image
-                        className="w-[14px]"
-                        height={14}
-                        width={14}
-                        src="/login/light-eye-open.svg"
-                        alt="Hide Icon"
-                      />
+                        <Image
+                          className="w-[14px]"
+                          height={14}
+                          width={14}
+                          src="/login/light-eye-open.svg"
+                          alt="Hide Icon"
+                        />
                       </>
                     ) : (
                       <>
-                      <Image
-                        className="w-[14px]"
-                        height={14}
-                        width={14}
-                        src="/login/light-eye-close.svg"
-                        alt="Show Icon"
-                      />
+                        <Image
+                          className="w-[14px]"
+                          height={14}
+                          width={14}
+                          src="/login/light-eye-close.svg"
+                          alt="Show Icon"
+                        />
                       </>
                     )}
                   </button>
@@ -133,13 +126,12 @@ const Page: React.FC = () => {
               </div>
 
               <button
-  type="submit"
-  className="w-full flex justify-center items-center font-bold bg-gradient-to-tr from-blue-400 to-indigo-500 text-white shadow-lg border poppins rounded-lg py-[6.5px]"
-  // disabled={loading}
->
-  Sign in
-</button>
-
+                type="submit"
+                className="w-full flex justify-center items-center font-bold bg-gradient-to-tr from-blue-400 to-indigo-500 text-white shadow-lg border poppins rounded-lg py-[6.5px]"
+                // disabled={loading}
+              >
+                Sign in
+              </button>
             </div>
           </form>
         </div>
