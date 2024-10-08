@@ -1,0 +1,20 @@
+export const users =  [
+        {
+            id:1,
+            name:"panna",
+            mobileNumber:"+8801835678976",
+            active:true,
+        },
+        {
+            id:2,
+            name:"Saber",
+            mobileNumber:"+8801835678976",
+            active:true,
+        },
+        {
+            id:3,
+            name:"Dipu",
+            mobileNumber:"+8801835678976",
+            active:true,
+        }
+    ]
