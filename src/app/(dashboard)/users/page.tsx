@@ -194,8 +194,8 @@ console.log(users);
           </div>
 
           <div className="flex justify-end">
-            <Link href={"/administrator/create-new-administrator"}>
-              <button className="flex justify-center items-center gap-2 rounded-lg bg-[#208330] px-[32px] py-[15px]">
+            <Link href={"/users/create-new-user"}>
+              <button className="flex justify-center items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 to-indigo-500 px-[20px] py-[10px]">
                 {/* <Image
                   src="/dashboard/add.svg"
                   alt="add icon"
@@ -209,7 +209,7 @@ console.log(users);
           </div>
         </div>
 
-        <div className="bg-[#FFFFFF] m-6 rounded-xl p-6 text-[#3F4254] ">
+        <div className="bg-[#FFFFFF] m-6 rounded-xl p-6 text-[#3F4254] shadow-md">
           <h1 className="pb-2 poppins ">
             Users Data Table
           </h1>
@@ -239,7 +239,7 @@ console.log(users);
 
                 <input
                   type="text"
-                  placeholder="Search with Administrator Name, Email, Phone Number"
+                  placeholder="Search with User Name, Email, Phone Number"
                   // value={searchQuery}
                   // onChange={handleSearchChange}
                   className="w-[320px] pl-8 pr-2 py-1 border border-gray-300 rounded-md bg-[#0000000D] focus:outline-none poppins"
@@ -296,7 +296,7 @@ console.log(users);
                     <FaSort />
                   </span>
                 </th>
-                <th className=""></th>
+                {/* <th className=""></th> */}
                 <th className=""></th>
               </tr>
             </thead>
@@ -328,7 +328,7 @@ console.log(users);
                       {user.active ? "Active" : "Inactive"}
                     </span>
                   </td>
-                  <td className="py-3">
+                  {/* <td className="py-3">
                     <div className="flex justify-center items-center ">
                       <label className="inline-flex items-center cursor-pointer">
                         <input
@@ -355,7 +355,7 @@ console.log(users);
                                 : null
                             } `}
                           >
-                            {/* {user.active ? (
+                            {user.active ? (
                               <Image
                                 src="/dashboard/check.svg"
                                 alt="Checkmark"
@@ -363,12 +363,12 @@ console.log(users);
                                 height={20}
                                 className="w-full h-full"
                               />
-                            ) : null} */}
+                            ) : null}
                           </div>
                         </div>
                       </label>
                     </div>
-                  </td>
+                  </td> */}
                   <td>
                     <div className="flex justify-center items-center">
                       <button className="px-[16px] font-semibold py-[3px] rounded bg-[#1C469C] text-[#ffffff]"

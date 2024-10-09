@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 // import React, { useState, useEffect } from "react";
 // import { Types } from "../types";
 // import { useTheme } from "next-themes";
@@ -20,11 +21,16 @@ import Image from "next/image";
 // }
 
 const Navbar: React.FC = () => {
+  const pathname = usePathname();
   //   const { push } = useRouter();
   //   const [users, setUsers] = useState<Types.Admin | null>(null);
   //   const [role, setRole] = useState<string | null>("");
   //   const [isChecked, setIsChecked] = useState(false);
   //   const { systemTheme, theme, setTheme } = useTheme();
+
+  const isActivePath = (path: string) => {
+    return pathname.includes(path);
+  };
 
   return (
     <>
@@ -34,12 +40,13 @@ const Navbar: React.FC = () => {
             listClasses="text-[#151317] text-[20px] font-medium poppins dark:text-[#FFFFFF]"
             capitalizeLinks
           /> */}
+          <span className="text-[#151317] text-[20px] font-medium poppins">{isActivePath("users") ? "Users" : "Report"}</span>
         </div>
 
         <div className="flex justify-end items-center gap-6">
           <div className="flex gap-4">
             <div>
-              <h1 className="text-[#39363C] poppins">userName </h1>
+              <h1 className="text-[#39363C] poppins">username </h1>
               <h1 className="flex justify-end text-[#918F92] poppins">role</h1>
             </div>
             <div className="flex justify-center items-center">

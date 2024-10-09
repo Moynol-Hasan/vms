@@ -32,39 +32,40 @@ const Sidebar: React.FC = () => {
         </div>
 
         <div className="mx-4 mt-6">
-            <Link href={"/dashboard"}>
-              <button
-                className={`flex items-center w-full py-1 rounded-md focus:outline-none active:bg-[#56e37e1a] ${
-                  isActivePath("/dashboard")
-                    ? "bg-[#56e37e1a] border border-[#FFFFFFBF]"
-                    : "border border-transparent"
-                }`}
-              >
-                <FaRegUserCircle className={`m-2 w-auto h-auto ${isActivePath("/dashboard") ? "text-[#208330]" : "text-[#000000]"}`}/>
-                <span className={`${isActivePath("/dashboard") ? "text-[#208330]" : "text-[#000000]"}`}>Users</span>
-              </button>
-            </Link>
+        <Link href={"/users"}>
+  <button
+    className={`flex items-center w-full py-1 rounded-md focus:outline-none active:bg-[#5db3e01a] ${
+      isActivePath("/dashboard")
+        ? "bg-[#5db3e01a] border border-[#FFFFFFBF]"
+        : "border border-transparent"
+    }`}
+  >
+    <FaRegUserCircle className={`m-2 w-auto h-auto ${isActivePath("/dashboard") ? "text-[#2070b3]" : "text-[#000000]"}`}/>
+    <span className={`${isActivePath("/dashboard") ? "text-[#2070b3]" : "text-[#000000]"}`}>Users</span>
+  </button>
+</Link>
 
-            <Link href={"/report"}>
-              <button
-                className={`flex items-center w-full py-1 rounded-md focus:outline-none active:bg-[#56e37e1a] ${
-                  isActivePath("/report")
-                    ? "bg-[#56e37e1a] border border-[#FFFFFFBF]"
-                    : "border border-transparent"
-                }`}
-              >
-                {" "}
-                <HiOutlineDocumentReport className={`m-2 w-auto h-auto ${isActivePath("/report") ? "text-[#208330]" : "text-[#000000]"}`}/>
-                <span className={`${isActivePath("/report") ? "text-[#208330]" : "text-[#000000]"}`}>Report</span>
-              </button>
-            </Link>
+
+<Link href={"/report"}>
+  <button
+    className={`flex items-center w-full py-1 rounded-md focus:outline-none active:bg-[#5db3e01a] ${
+      isActivePath("/report")
+        ? "bg-[#5db3e01a] border border-[#FFFFFFBF]"
+        : "border border-transparent"
+    }`}
+  >
+    <HiOutlineDocumentReport className={`m-2 w-auto h-auto ${isActivePath("/report") ? "text-[#2070b3]" : "text-[#000000]"}`}/>
+    <span className={`${isActivePath("/report") ? "text-[#2070b3]" : "text-[#000000]"}`}>Report</span>
+  </button>
+</Link>
+
 
             <button
               className="flex items-center w-full py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#FFFFFF0D] active:bg-[#FFFFFF40]"
               onClick={handleLogout}
             >
-              <RiLogoutCircleRLine className={`m-2 w-auto h-auto ${isActivePath("/logout") ? "text-[#208330]" : "text-[#000000]"}`}/>
-              <span className={`${isActivePath("/logout") ? "text-[#208330]" : "text-[#000000]"}`}>Logout</span>
+              <RiLogoutCircleRLine className={`m-2 w-auto h-auto ${isActivePath("/logout") ? "text-[#2070b3]" : "text-[#000000]"}`}/>
+              <span className={`${isActivePath("/logout") ? "text-[#2070b3]" : "text-[#000000]"}`}>Logout</span>
             </button>
         </div>
       </div>
